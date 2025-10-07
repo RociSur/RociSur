@@ -122,31 +122,32 @@
     </div>
   </div>
 
-  <div class="container">
-    <h2>Envía tu historia con el formulario</h2>
+<div class="container">
+  <h2>O envía un Correo contando tu historia! 📝🌟</h2>
+  <p class="email-text">Correo: <strong>rocisur09@gmail.com</strong></p>
 
-    <!-- Google Form incrustado -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqtDpjsddl0WwsJNYIAhT2YsrBb2jcUXYo-euhKaGlN_My2w/viewform?embedded=true" 
-            width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
-      Cargando…
-    </iframe>
+  <button class="btn" onclick="copyEmail()">📋 Copiar correo</button>
+  <div id="copyMsg">¡Correo copiado al portapapeles!</div>
 
-    <h2>O copia el correo para enviar tu historia</h2>
-    <p class="email-text">Correo: <strong>rocisur09@gmail.com</strong></p>
-    <button class="btn" onclick="copyEmail()">📋 Copiar correo</button>
-    <div id="copyMsg">¡Correo copiado al portapapeles!</div>
-  </div>
+  <p class="small-note">
+    Sabemos la pereza que da abrir Gmail, así que...  
+    Te dejamos el enlace a la apertura rápida! :D
+  </p>
+  <a class="btn gmail-btn" 
+     href="https://mail.google.com/mail/?view=cm&fs=1&to=rocisur09@gmail.com&su=Mi%20historia%20Free%20Fire&body=Hola%2C%20quiero%20contar%20mi%20historia..." 
+     target="_blank" rel="noopener">
+    📨 Abrir Gmail
+  </a>
+</div>
 
-  <script>
-    function copyEmail() {
-      const email = "rocisur09@gmail.com"; // correo real de Roci
-      navigator.clipboard.writeText(email).then(() => {
-        document.getElementById("copyMsg").style.display = "block";
-        setTimeout(() => {
-          document.getElementById("copyMsg").style.display = "none";
-        }, 2000);
-      });
-    }
-  </script>
-</body>
-</html>
+<script>
+  function copyEmail() {
+    const email = "rocisur09@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      document.getElementById("copyMsg").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("copyMsg").style.display = "none";
+      }, 2000);
+    });
+  }
+</script>
