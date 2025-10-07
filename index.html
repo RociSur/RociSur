@@ -1,107 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Página de Historias Free Fire</title>
 
-  <!-- Fuente de Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Fuente de Google (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffe6f0; /* rosa pastel clarito */
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      text-align: center;
-      padding: 30px;
-      background-color: #ffb6c1;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff0f6; /* rosa más claro en vez de blanco */
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 20px 0;
-      padding: 12px 20px;
-      background-color: #ff80aa;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .btn:hover {
-      background-color: #ff4d88;
-    }
-
-    /* Estilo de perfil */
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: #ffeaf3;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .profile img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ffb6c1;
-    }
-
-    .profile-info h2 {
-      margin: 0 0 8px;
-      font-size: 22px;
-      color: #d63384;
-    }
-
-    .profile-info p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.5;
-      color: #555;
-    }
-
-    /* Aviso de copiado */
-    #copyMsg {
-      display: none;
-      margin-top: 10px;
-      font-size: 14px;
-      color: green;
-      font-weight: 600;
-    }
-
-    .email-text {
-      margin-top: 10px;
-      font-size: 15px;
-      color: #444;
-    }
-  </style>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -111,43 +19,58 @@
 
   <!-- Sección de perfil -->
   <div class="container profile">
-    <img src="https://raw.githubusercontent.com/RociSur/RociSur/refs/heads/main/Image/Perfil.png" alt="Perfil de Roci">
+    <img src="https://raw.githubusercontent.com/RociSur/RociSur/refs/heads/main/Image/Perfil.png" alt="Perfil de Roci" />
     <div class="profile-info">
       <h2>Roci</h2>
       <p>
-        Apasionada jugadora de Free Fire y narradora de historias.  
-        Este espacio está dedicado a compartir experiencias, anécdotas y momentos únicos de chicas gamers.  
+        Apasionada jugadora de Free Fire y narradora de historias.
+        Este espacio está dedicado a compartir experiencias, anécdotas y momentos únicos de chicas gamers.
         ¡Tu historia también puede inspirar a otras!
       </p>
     </div>
   </div>
 
-<div class="container">
-  <h2>¡Comparte tu historia por Gmail!📩📝🌟</h2>
-  <p class="email-text">Correo: <strong>rocisur09@gmail.com</strong></p>
+  <!-- Formulario embebido -->
+  <div class="container">
+    <h2>Envía tu historia con el formulario</h2>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdqtDpjsddl0WwsJNYIAhT2YsrBb2jcUXYo-euhKaGlN_My2w/viewform?embedded=true"
+      width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
+    >
+      Cargando…
+    </iframe>
+  </div>
 
-  <button class="btn" onclick="copyEmail()">📋 Copiar correo</button>
-  <div id="copyMsg">¡Correo copiado al portapapeles!</div>
+  <!-- Sección de correo con botones centrados -->
+  <div class="container center-buttons">
+    <h2>O envía un Correo contando tu historia! 📝🌟</h2>
+    <p class="email-text">Correo: <strong>rocisur09@gmail.com</strong></p>
 
-  <p class="small-note">
-    Sabemos la pereza que da abrir Gmail, así que...  
-    Te dejamos el enlace a la apertura rápida! :D
-  </p>
-  <a class="btn gmail-btn" 
-     href="https://mail.google.com/mail/?view=cm&fs=1&to=rocisur09@gmail.com&su=Mi%20historia%20Free%20Fire&body=Hola%2C%20quiero%20contar%20mi%20historia..." 
-     target="_blank" rel="noopener">
-    📨 Abrir Gmail
-  </a>
-</div>
+    <button class="btn" onclick="copyEmail()">📋 Copiar correo</button>
+    <div id="copyMsg">¡Correo copiado al portapapeles!</div>
 
-<script>
-  function copyEmail() {
-    const email = "rocisur09@gmail.com";
-    navigator.clipboard.writeText(email).then(() => {
-      document.getElementById("copyMsg").style.display = "block";
-      setTimeout(() => {
-        document.getElementById("copyMsg").style.display = "none";
-      }, 2000);
-    });
-  }
-</script>
+    <p class="small-note">
+      Sabemos la pereza que da abrir Gmail, así que...<br />
+      ¡Te dejamos el enlace a la apertura rápida! :D
+    </p>
+    <a
+      class="btn gmail-btn"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=rocisur09@gmail.com&su=Mi%20historia%20Free%20Fire&body=Hola%2C%20quiero%20contar%20mi%20historia..."
+      target="_blank" rel="noopener"
+    >
+      📨 Abrir Gmail
+    </a>
+  </div>
+
+  <script>
+    function copyEmail() {
+      const email = "rocisur09@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const msg = document.getElementById("copyMsg");
+        msg.style.display = "block";
+        setTimeout(() => { msg.style.display = "none"; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
