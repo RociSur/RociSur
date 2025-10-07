@@ -86,6 +86,21 @@
       line-height: 1.5;
       color: #555;
     }
+
+    /* Aviso de copiado */
+    #copyMsg {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: green;
+      font-weight: 600;
+    }
+
+    .email-text {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #444;
+    }
   </style>
 </head>
 <body>
@@ -96,7 +111,7 @@
 
   <!-- Sección de perfil -->
   <div class="container profile">
-    <img src="https://raw.githubusercontent.com/RociSur/RociSur/refs/heads/main/Image/Perfil.png" alt="Perfil de la creadora">
+    <img src="https://raw.githubusercontent.com/RociSur/RociSur/refs/heads/main/Image/Perfil.png" alt="Perfil de Roci">
     <div class="profile-info">
       <h2>Roci</h2>
       <p>
@@ -116,13 +131,22 @@
       Cargando…
     </iframe>
 
-    <h2>O envíala directo por Gmail</h2>
-    <!-- Botón que abre Gmail en modo redacción -->
-    <a class="btn" 
-       href="https://mail.google.com/mail/?view=cm&fs=1&to=miyanela57u7@gmail.com&su=Mi%20historia%20Free%20Fire&body=Hola%2C%20quiero%20compartir%20mi%20historia..." 
-       target="_blank" rel="noopener">
-      Abrir Gmail 📧
-    </a>
+    <h2>O copia el correo para enviar tu historia</h2>
+    <p class="email-text">Correo: <strong>rocisur09@gmail.com</strong></p>
+    <button class="btn" onclick="copyEmail()">📋 Copiar correo</button>
+    <div id="copyMsg">¡Correo copiado al portapapeles!</div>
   </div>
+
+  <script>
+    function copyEmail() {
+      const email = "rocisur09@gmail.com"; // correo real de Roci
+      navigator.clipboard.writeText(email).then(() => {
+        document.getElementById("copyMsg").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("copyMsg").style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
