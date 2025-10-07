@@ -1,0 +1,119 @@
+/* Fuente general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffe6f0; /* rosa pastel clarito */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffb6c1;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff0f6; /* rosa más claro */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background-color: #ff80aa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #ff4d88;
+}
+
+/* Botón Gmail */
+.gmail-btn {
+  background-color: #d93025; /* rojo Gmail */
+}
+
+.gmail-btn:hover {
+  background-color: #b1271c;
+}
+
+/* Centrar botones */
+.center-buttons {
+  text-align: center;
+}
+
+/* Perfil */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffeaf3;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffb6c1;
+}
+
+.profile-info h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #d63384;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Texto de correo */
+.email-text {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Nota pequeña */
+.small-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+/* Aviso de copiado */
+#copyMsg {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
+  font-weight: 600;
+}
